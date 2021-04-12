@@ -9,5 +9,5 @@ def play(window):
 			window.addstr(l)
 			window.refresh()
 def main():
-	system(f"python3 {__file__.replace('__main__', 'process')} {argv[1]} > {__file__.replace('py', 'txt')}")
+	system(f"python3 {__file__.replace('__init__', 'process')} {argv[1]} > {__file__.replace('py', 'txt')}")
 	wrapper(play)
