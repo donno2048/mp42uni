@@ -19,3 +19,5 @@ pip3 install git+https://github.com/donno2048/mp42uni
 ## Usage
 
 Run `mp42uni <video.mp4>` with the terminal **maximized** to display _<video.mp4>_ as ascii art.
+
+If you get `_curses.error: addwstr() returned ERR` try decreasing the font size.
