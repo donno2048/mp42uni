@@ -15,14 +15,9 @@ def play(window):
 		window.move(0, 0)
 		success, image = vidcap.read()
 def I2T(File):
-	text = ""
-	im = open(File)
-	counter = 0
-	field = True
+	text, im, counter, field= "", open(File), 0, True
 	for pixel in list(im.convert("1").getdata()):
-		if field:
-			if pixel > 127: text += "*"
-			else: text += " "
+		if field: text += "*" if pixel > 127 else " "
 		counter += 1
 		if counter >= im.size[0]:
 			counter = 0
