@@ -1,5 +1,4 @@
 from curses import wrapper
-from os import system
 from sys import argv
 try: from PIL.Image import open
 except: from Image import open
