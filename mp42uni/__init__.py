@@ -2,13 +2,13 @@ from curses import wrapper
 from sys import argv
 try: from PIL.Image import open
 except: from Image import open
-from cv2 import VideoCapture, imwrite, resize
+from cv2 import VideoCapture, imencode, resize
+from io import BytesIO
 def play(window):
 	vidcap = VideoCapture(argv[1])
 	success, image = vidcap.read()
 	while success:
-		imwrite(__file__.replace(".py", ".jpg"), resize(image, (144, 108), interpolation = 3))
-		for l in I2T(__file__.replace(".py", ".jpg")).split("\n"):
+		for l in I2T(BytesIO(imencode(".jpg", resize(image, (144, 108), interpolation = 3))[1])).split("\n"):
 			# time.sleep(x) # Use this to change the fps
 			window.addstr(l + "\n")
 			window.refresh()
