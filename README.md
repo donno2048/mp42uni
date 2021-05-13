@@ -21,3 +21,5 @@ pip3 install git+https://github.com/donno2048/mp42uni
 Run `mp42uni <video.mp4>` with the terminal **maximized** to display _<video.mp4>_ as ascii art.
 
 If you get `_curses.error: addwstr() returned ERR` try decreasing the font size.
+
+If you get `ModuleNotFoundError: No module named '_curses'` on Windows try: `pip3 install windows-curses==2.2.0`
