@@ -1,7 +1,7 @@
 from setuptools import setup,find_packages
 setup(
     name='mp42uni',
-    version='1.0.2',
+    version='1.0.3',
     description='Use this to show a video in the terminal (Unicode art)',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
