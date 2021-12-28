@@ -4,6 +4,8 @@ Use this to show a video in the terminal (Unicode art)
 
 ## install
 
+(on Linux you may need to run `sudo apt-get install ffmpeg libsm6 libxext6 -y` to use `opencv`)
+
 ### From PyPi
 
 ```sh
