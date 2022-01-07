@@ -1,11 +1,12 @@
-from curses import wrapper
 from sys import argv
+from curses import wrapper
+from questionary import path
 try: from PIL.Image import open
 except ImportError: from Image import open
 from cv2 import VideoCapture, imencode, resize
 from io import BytesIO
-def play(window):
-	vidcap = VideoCapture(argv[1])
+def play(window, File):
+	vidcap = VideoCapture(File)
 	success, image = vidcap.read()
 	while success:
 		for l in I2T(BytesIO(imencode(".jpg", resize(image, (144, 108), interpolation = 3))[1])).split("\n"):
@@ -24,4 +25,4 @@ def I2T(File):
 			if field: text += "\n"
 			field = not field
 	return text
-def main(): wrapper(play)
+def main(): wrapper(play, argv[1] if len(argv) > 1 else path('Path to video file').ask())
