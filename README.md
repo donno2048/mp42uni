@@ -2,6 +2,8 @@
 
 Use this to show a video in the terminal (Unicode art)
 
+This doesn't use dithering, to see something similar but with dithering, see my [demo](https://youtu.be/nYYAeVdEu8Q) and it's [source code](https://github.com/donno2048/mp4-to-subs/tree/braille)
+
 ## install
 
 (on Linux you may need to run `sudo apt-get install ffmpeg libsm6 libxext6 -y` to use `opencv`)
